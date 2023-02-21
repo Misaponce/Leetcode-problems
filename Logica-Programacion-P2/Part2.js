@@ -23,31 +23,49 @@
 // }
 
 //23. Leer un número entero de tres dígitos y determinar cuántos dígitos primos tiene.
-function cuantosDigitosPrimos(num) {
-    let numToString = num.toString();
-    let primoContador = 0;
+// function cuantosDigitosPrimos(num) {
+//     let numToString = num.toString();
+//     let primoContador = 0;
 
-    for (let i = 0; i < numToString.length; i++) {
-        let backToNum = parseInt(numToString[i]);
-        // console.log(backToNum);
-        //Aplicando recursividad con una funcion para determinar que digitos son primos
+//     for (let i = 0; i < numToString.length; i++) {
+//         let backToNum = parseInt(numToString[i]);
+//         // console.log(backToNum);
+//         //Aplicando recursividad con una funcion para determinar que digitos son primos
 
-        function isPrime(d) {
-            if (d < 2) {
-                return false
-            }
+//         function isPrime(d) {
+//             if (d < 2) {
+//                 return false
+//             }
 
-            for (let j = 2; j <= Math.sqrt(d); j++){
-                if (d % j === 0) {
-                    return false
-                }
-            }
-            return true
-        }
-        isPrime(backToNum) === true ? primoContador++ : primoContador--;
-        console.log(primoContador);
-    }
-    return primoContador <= 0 ? `El entero ${num} no contiene digitos primos` : `El entero ${num} tiene ${primoContador} digitos primos`
-}
+//             for (let j = 2; j <= Math.sqrt(d); j++){
+//                 if (d % j === 0) {
+//                     return false
+//                 }
+//             }
+//             return true
+//         }
+//         isPrime(backToNum) === true ? primoContador++ : primoContador--;
+//         console.log(primoContador);
+//     }
+//     return primoContador <= 0 ? `El entero ${num} no contiene digitos primos` : `El entero ${num} tiene ${primoContador} digitos primos`
+// }
 
-console.log(cuantosDigitosPrimos(444));
+//24. Leer un número entero de tres dígitos y determinar cuántos dígitos pares tiene.
+// function cuantosDigitosPares(num) {
+//     let stringNum = num.toString();
+//     let parContador = 0;
+
+//     for (let i = 0; i < stringNum.length; i++){
+//         let backToNum = parseInt(stringNum[i]);
+//         if (backToNum % 2 === 0) {
+//             parContador++;
+//         } else {
+//             parContador--;
+//         }
+//     }
+
+//     return parContador <= 0 ? `El entero ${num} no tiene digitos pares` : `El entero ${num} tiene ${parContador} digitos pares`;
+// }
+
+
+console.log(cuantosDigitosPares(123));
